@@ -331,97 +331,98 @@
 
     /* ✅ Responsive Design */
 
-/* تابلت */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-    padding: 12px 20px;
-  }
+    /* تابلت */
+    @media (max-width: 768px) {
 
-  .navbar h1 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-  }
+      /* Navbar */
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 12px 20px;
+      }
 
-  .navbar ul {
-    flex-direction: row;
-    gap: 15px;
-  }
+      .navbar h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
 
-  .navbar ul li a {
-    font-size: 14px;
-    text-shadow: 0 0 5px #00aaff;
-  }
+      .navbar ul {
+        flex-direction: row;
+        gap: 15px;
+      }
 
-  /* Projects Section */
-  section {
-    padding: 100px 20px;
-  }
+      .navbar ul li a {
+        font-size: 14px;
+        text-shadow: 0 0 5px #00aaff;
+      }
 
-  .projects-grid {
-    grid-template-columns: 1fr; /* بوكس واحد فكل صف */
-    gap: 20px;
-  }
+      /* Projects Section */
+      section {
+        padding: 100px 20px;
+      }
 
-  .project-card {
-    width: 100%;
-    padding: 15px;
-  }
+      .projects-grid {
+        grid-template-columns: 1fr;
+        /* بوكس واحد فكل صف */
+        gap: 20px;
+      }
 
-  .project-card p {
-    font-size: 0.85rem;
-  }
+      .project-card {
+        width: 100%;
+        padding: 15px;
+      }
 
-  .slider-container img {
-    height: 180px;
-  }
+      .project-card p {
+        font-size: 0.85rem;
+      }
 
-  /* Modal */
-  .modal-content {
-    max-width: 95%;
-    max-height: 70%;
-  }
+      .slider-container img {
+        height: 180px;
+      }
 
-  .modal-arrow {
-    font-size: 40px;
-  }
-}
+      /* Modal */
+      .modal-content {
+        max-width: 95%;
+        max-height: 70%;
+      }
 
-/* موبايل */
-@media (max-width: 480px) {
-  .navbar h1 {
-    font-size: 1.2rem;
-  }
+      .modal-arrow {
+        font-size: 40px;
+      }
+    }
 
-  .navbar ul li a {
-    font-size: 12px;
-  }
+    /* موبايل */
+    @media (max-width: 480px) {
+      .navbar h1 {
+        font-size: 1.2rem;
+      }
 
-  .projects-title,
-  .section-title {
-    font-size: 1.6rem;
-  }
+      .navbar ul li a {
+        font-size: 12px;
+      }
 
-  .project-card h3 {
-    font-size: 1.1rem;
-  }
+      .projects-title,
+      .section-title {
+        font-size: 1.6rem;
+      }
 
-  .project-card p {
-    font-size: 0.8rem;
-  }
+      .project-card h3 {
+        font-size: 1.1rem;
+      }
 
-  .slider-container img {
-    height: 150px;
-  }
+      .project-card p {
+        font-size: 0.8rem;
+      }
 
-  .modal-content {
-    max-width: 90%;
-    max-height: 65%;
-  }
-}
+      .slider-container img {
+        height: 150px;
+      }
 
+      .modal-content {
+        max-width: 90%;
+        max-height: 65%;
+      }
+    }
   </style>
 </head>
 
@@ -453,7 +454,8 @@
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
         <h3>Masscan</h3>
-        <p>A custom recon tool for bug bounty hunting with automation features.</p>
+        <p>Ultra-fast port scanner capable of scanning the entire Internet in minutes.
+        </p>
       </div>
 
       <div class="project-card">
@@ -464,7 +466,8 @@
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
         <h3>Netcat</h3>
-        <p>Scanner that detects SQLi, XSS, and common OWASP vulnerabilities.</p>
+        <p>Versatile networking utility for reading, writing, and debugging network connections.
+        </p>
       </div>
     </div>
   </section>
@@ -483,8 +486,9 @@
           <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <h3>1host Discovry</h3>
-        <p>A custom recon tool for bug bounty hunting with automation features.</p>
+        <h3>Host Discovry</h3>
+        <p> Identifies live hosts on a network before scanning them.
+        </p>
       </div>
 
       <div class="project-card">
@@ -504,8 +508,9 @@
           <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <h3>2port Scanning</h3>
-        <p>Scanner that detects SQLi, XSS, and common OWASP vulnerabilities.</p>
+        <h3>Port Scanning</h3>
+        <p>Detects open ports and services running on a target system.
+        </p>
       </div>
 
       <div class="project-card">
@@ -517,8 +522,9 @@
           <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <h3>3version detection</h3>
-        <p>Scanner that detects SQLi, XSS, and common OWASP vulnerabilities.</p>
+        <h3>Version detection</h3>
+        <p>Determines the software and version details of detected services.
+        </p>
       </div>
 
       <div class="project-card">
@@ -529,8 +535,9 @@
           <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <h3>4OS fingerpainting</h3>
-        <p>Scanner that detects SQLi, XSS, and common OWASP vulnerabilities.</p>
+        <h3>OS fingerpainting</h3>
+        <p>Identifies the operating system of target machines through network responses.
+        </p>
       </div>
 
       <div class="project-card">
@@ -542,8 +549,8 @@
           <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
           <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
         </div>
-        <h3>5vilnerability Scan</h3>
-        <p>Scanner that detects SQLi, XSS, and common OWASP vulnerabilities.</p>
+        <h3>Vilnerability Scan</h3>
+        <p>Uses NSE (Nmap Scripting Engine) to detect potential vulnerabilities in systems.</p>
       </div>
 
 

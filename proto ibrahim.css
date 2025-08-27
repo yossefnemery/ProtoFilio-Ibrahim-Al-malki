@@ -11,7 +11,6 @@ html {
     color: #fff;
     overflow-x: hidden;
       scroll-behavior: smooth;
-
 }
 
 .digit {
@@ -37,8 +36,16 @@ html {
     }
 }
 
+#bg-image {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("bg-phone.png") no-repeat center center/cover;
+  z-index: -2; 
+}
 
-/* خلفية الفيديو */
 #bg-video {
     position: fixed;
     top: 0;
@@ -48,12 +55,17 @@ html {
     object-fit: cover;
     z-index: -1;
     filter: brightness(0.75) contrast(0.9);
+
+    /* position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; */
 }
 
 
-
-
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -103,7 +115,6 @@ html {
 }
 
 
-/* سكشن */
 section {
     min-height: 100vh;
     display: flex;
@@ -122,7 +133,7 @@ section {
     }
 
 
-/* About box */
+
 .about-box {
     background: rgba(0, 10, 29, 0.412);
     border-radius: 20px;
@@ -131,6 +142,10 @@ section {
     text-align: center;
     border: 2px solid #0071C3;
     box-shadow: 0 0 25px rgb(0, 114, 195);
+}
+
+#about {
+    margin-top: 70px;
 }
 
 .about-box img {
@@ -147,6 +162,14 @@ h1 {
     margin-bottom: 15px;
     text-align: center;
     text-shadow: 0 0 12px rgba(0, 113, 195, 0.8);
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background: #0071C3;
+    margin: 10px auto 20px;
+    box-shadow: 0 0 12px rgba(0, 113, 195, 0.8);
 }
 
 p {
@@ -183,9 +206,13 @@ a {
     box-shadow: 0 0 15px #0071C3;
 }
 
-/* Projects */
+.btn:active {
+    transform: scale(0.95);
+}
+
+
 .projects-container {
-  display: flex;  /* جنب بعض */
+  display: flex; 
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
@@ -193,7 +220,7 @@ a {
 }
 
 .project-box {
-    width: 45%;      /* كل بوكس ياخد نص المساحة تقريبًا */
+    width: 45%;  
   max-width: 520px;
   min-height: 620px;
   background: rgba(0, 14, 33, 0.7);
@@ -213,10 +240,10 @@ a {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px); /* يطلع فوق */
+    transform: translateY(-20px);
   }
   100% {
-    transform: translateY(0px);   /* يرجع مكانه */
+    transform: translateY(0px);
   }
 }
 
@@ -341,6 +368,9 @@ a {
     box-shadow: 0 0 18px rgba(0, 113, 195, 0.9);
 }
 
+.btn-submit:active {
+    transform: scale(0.95);
+}
 
 #social {
     min-height: 50vh;
@@ -363,13 +393,12 @@ a {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: #000814;
+    background: #0008149b;
     border: 2px solid #0071C3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* يخلي الايقونة + الاسم في النص */
     color: #00aaff;
     font-size: 1.6rem;
     text-decoration: none;
@@ -389,13 +418,12 @@ a {
     transform: scale(1.15);
     background: #0071C3;
     color: #000814;
-    /* الأيقونة هتبقى اسود */
     box-shadow: 0 0 25px rgba(0, 170, 255, 0.8);
 }
 
 .social-item a:hover span {
     color: #000814;
-    /* الاسم يبقى اسود برضو */
+    
 }
 .about-box img {
     max-width: 150px;
@@ -408,14 +436,14 @@ a {
 
   .project-box {
     width: 90%;
-    min-height: 420px; /* تزود الطول */
+    min-height: 420px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .project-box .btn {
-    margin-top: auto; /* يخلي الزرار تحت */
+    margin-top: auto; 
   }
 
   
@@ -441,7 +469,7 @@ a {
 
 @media (max-width: 768px) {
    .navbar {
-    flex-direction: column; /* خليهم فوق بعض */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 10vh;
@@ -449,7 +477,7 @@ a {
 
 
   .logo {
-    font-size: 16px; /* الحجم مناسب */
+    font-size: 16px;
     margin-bottom: 8px; 
     text-align: center;
   }
@@ -473,7 +501,13 @@ a {
     width: 99%;
     min-height: 450px;
   }
-
+  hr{
+    border: none;
+    height: 2px;
+    background: #0071C3;
+    margin: 10px auto 20px;
+    box-shadow: 0 0 12px rgba(0, 113, 195, 0.8);
+}
 }
   
 @media (min-width: 769px) {
