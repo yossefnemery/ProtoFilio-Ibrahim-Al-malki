@@ -419,7 +419,21 @@ a {
   }
 
   
+.brand {
+  display: block;
+  text-align: center; 
+  font-size: 15px;
+  font-weight: bold;
+  color: #0071C3;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0, 149, 255, 0.6);
+  margin: 10px 0;  
+}
 
+.brand:hover {
+  color: #00aaff;
+  text-shadow: 0 0 15px rgba(0, 170, 255, 0.8);
+} 
 
 
 
@@ -436,12 +450,12 @@ a {
 
   .logo {
     font-size: 16px; /* الحجم مناسب */
-    margin-bottom: 8px; /* مسافة بين الاسم والقائمة */
+    margin-bottom: 8px; 
     text-align: center;
   }
 
   .nav-links {
-    flex-direction: row; /* القائمة تفضل جمب بعض */
+    flex-direction: row; 
     justify-content: center;
     gap: 10px;
   }
@@ -456,7 +470,7 @@ a {
     align-items: center;
   }
   .project-box {
-    width: 90%;
+    width: 99%;
     min-height: 450px;
   }
 
@@ -472,7 +486,7 @@ a {
     align-items: stretch;
   }
   .project-box {
-    width: calc(50% - 30px); /* بوكسين في الصف */
+    width: calc(50% - 30px); 
     max-width: 520px;
     min-height: 620px;
   }
@@ -496,24 +510,11 @@ a {
   .project-box {
     min-height: 450px; 
   }
+  
   #about {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 
 
-.brand {
-  display: block;
-  text-align: center; 
-  font-size: 15px;
-  font-weight: bold;
-  color: #0071C3;
-  text-decoration: none;
-  text-shadow: 0 0 10px rgba(0, 149, 255, 0.6);
-  margin: 10px 0;  
-}
-
-.brand:hover {
-  color: #00aaff;
-  text-shadow: 0 0 15px rgba(0, 170, 255, 0.8);
-}   
+  
