@@ -496,6 +496,9 @@ a {
   .project-box {
     min-height: 450px; 
   }
+  #about {
+    margin-top: 40px;
+  }
 }
 
 
@@ -509,3 +512,8 @@ a {
   text-shadow: 0 0 10px rgba(0, 149, 255, 0.6);
   margin: 10px 0;  
 }
+
+.brand:hover {
+  color: #00aaff;
+  text-shadow: 0 0 15px rgba(0, 170, 255, 0.8);
+}   
