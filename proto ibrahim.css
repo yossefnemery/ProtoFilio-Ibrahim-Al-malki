@@ -55,63 +55,51 @@ html {
     object-fit: cover;
     z-index: -1;
     filter: brightness(0.75) contrast(0.9);
-
-    /* position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1; */
 }
 
-
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    background: rgba(0, 10, 29, 0.7);
-    border-bottom: 2px solid #0071C3;
-    box-shadow: 0 0 18px rgba(0, 113, 195, 0.4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    z-index: 1000;
-    backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 14, 33, 0.8);
+  border-bottom: 1px solid #0071C3;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #00aaff;
-    text-shadow: 0 0 12px rgba(0, 113, 195, 0.8);
-    cursor: pointer;
-    margin-top: 8px;
+  font-size: 22px;
+  color: #00aaff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #00aaff;
+  cursor: pointer;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
 .nav-links li a {
-    color: #cfd9e6;
-    text-decoration: none;
-    text-shadow: 0 0 5px #00aaff;
-    font-size: 1.05rem;
-    transition: 0.3s;
-    padding: 6px 12px;
-    border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #00aaff;
-    background: rgba(0, 113, 195, 0.15);
-    box-shadow: 0 0 12px rgba(0, 170, 255, 0.5);
+  color: #00aaff;
 }
 
 
@@ -232,7 +220,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* ========== */
   animation: floatBox 3s ease-in-out infinite;
 }
 @keyframes floatBox {
@@ -467,30 +454,33 @@ a {
 
 
 
+
+
 @media (max-width: 768px) {
-   .navbar {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-  }
-
-
-  .logo {
-    font-size: 16px;
-    margin-bottom: 8px; 
-    text-align: center;
+    .menu-toggle {
+    display: block;
   }
 
   .nav-links {
-    flex-direction: row; 
-    justify-content: center;
-    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 14, 33, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
   }
 
-  .nav-links a {
-    font-size: 13px;
-    padding: 5px 7px;
+  .nav-links.show {
+    max-height: 300px; 
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-shadow: #00b7ff 0 0 5px;
   }
 
    .projects-container {

@@ -24,36 +24,45 @@
 
 <body>
 
-<div id="bg-image"></div>
+  <div id="bg-image"></div>
 
   <video autoplay muted loop playsinline id="bg-video">
     <source src="background-vid.mp4" type="video/mp4">
   </video>
 
-  <!-- Navbar -->
+<header>
   <nav class="navbar">
-    <div class="logo"><i class="fas fa-shield-alt"></i> Ibrahim Al-malki</div>
-
-    <ul class="nav-links">
+    <a href="index.html" class="logo"><i class="fas fa-shield-alt"></i> Ibrahim Al-malki</a>
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#social">Social</a></li>
     </ul>
   </nav>
+</header>
+
 
   <!-- About -->
   <section id="about">
     <h1 class="section-title">About Me</h1>
     <div class="about-box">
-      <h2 class="section-title"><big>Ibrahim<br>Al-Malki</big><hr>Pentration Tester</h2>
+      <h2 class="section-title"><big>Ibrahim<br>Al-Malki</big>
+        <hr>Pentration Tester
+      </h2>
       <img src="img ibrahim.jpg" alt="Profile Picture">
       <p>
-        From a passion for cyber security to hands-on skills in penetration testing, <br>
-         my journey started with a diploma and drive to learn
+        Since childhood, I have been passionate about cyber security and always dreamed of studying Computer Science.
+        Unfortunately, my high school grades didn’t allow me to pursue that path, so I joined the Faculty of PPIS
+        instead. Still, my passion never faded. I took my first real step toward achieving my dream when I earned a
+        Diploma in Penetration Testing from Instant, which opened the door to practical experience and continuous
+        growth.
         <br><br><br>
-        Today, I help touch companies uncover and fix vulnerabilities before hackers strike, <br>
-         ensuring their systems stay secure
+        Today, I help touch companies uncover and fix vulnerabilities before hackers strike, ensuring their
+        systems stay secure
       </p>
       <div class="btns">
         <a href="CV Ibrahim.pdf" target="_blank" class="btn">View CV</a>
@@ -150,7 +159,8 @@
       </div>
     </div>
   </section>
-  <a href="https://yossefnemery.github.io/Protofilio-El-nemery/" target="_blank" class="brand">&copy; Devolp by El-Nemery</a>
+  <a href="https://yossefnemery.github.io/Protofilio-El-nemery/" target="_blank" class="brand">&copy; Devolp by
+    El-Nemery</a>
   <script src="proto ibrahim.js"></script>
 
 </body>

@@ -21,19 +21,27 @@
       overflow-x: hidden;
     }
 
-    /* Background Video */
-    .background-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(0.75) contrast(0.9);
-    }
+    #bg-image {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url("bg-phone.png") no-repeat center center/cover;
+  z-index: -2; 
+}
 
-    /* Navbar */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.75) contrast(0.9);
+}
+
     .navbar {
       position: fixed;
       top: 0;
@@ -78,27 +86,22 @@
       text-shadow: 0 0 12px #00aaff;
     }
 
-    /* Section */
     section {
       padding: 120px 50px;
       display: flex;
       flex-direction: column;
-      /* عشان العناصر تبقى فوق بعض مش جمب بعض */
       align-items: center;
-      /* يخلي كل حاجة في النص */
     }
 
 
     .projects-section {
       text-align: center;
-      /* عشان العنوان والبوكسات يكونوا في النص */
     }
 
     .projects-title {
       font-size: 2.5rem;
       color: #0071C3;
       margin-bottom: 30px;
-      /* يسيب مسافة صغيرة قبل البوكسات */
       text-shadow: 0 0 15px rgba(0, 113, 195, 0.8);
       font-family: 'Orbitron', sans-serif;
     }
@@ -115,7 +118,6 @@
       width: 100%;
     }
 
-    /* Projects Grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -138,7 +140,6 @@
       box-shadow: 0 15px 40px rgba(0, 113, 195, 0.9);
     }
 
-    /* Image slider inside card */
     .slider-container {
       position: relative;
       overflow: hidden;
@@ -180,7 +181,6 @@
       transition: 0.3s;
       z-index: 2;
       background: none;
-      /* شيلت الخلفية */
     }
 
     .arrow:hover {
@@ -212,7 +212,6 @@
 
     .modal-content {
       width: 60%;
-      /* صغرنا المودال */
       max-width: 800px;
       position: relative;
     }
@@ -237,7 +236,6 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 60px;
-      /* كبرنا السهم */
       color: white;
       cursor: pointer;
       user-select: none;
@@ -270,7 +268,6 @@
       color: #ddd;
     }
 
-    /* Mouse Effect */
     .binary {
       position: fixed;
       font-size: 14px;
@@ -299,7 +296,6 @@
       height: 100%;
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.9);
-      /* خلفية غامقة */
     }
 
     .modal-content {
@@ -330,106 +326,100 @@
 
 
 
-    /* ==================== */
 
-    /* ✅ للموبايل والتابلت */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 20px;
-  }
+    @media (max-width: 768px) {
 
-  .navbar h1 {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
+      /* Navbar */
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 20px;
+      }
 
-  .navbar ul {
-    flex-direction: row;
-    gap: 15px;
-  }
+      .navbar h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
 
-  .navbar ul li a {
-    font-size: 14px;
-    text-shadow: 0 0 5px #00aaff;
-  }
+      .navbar ul {
+        flex-direction: row;
+        gap: 15px;
+      }
 
-  /* Projects Section */
-  section {
-    padding: 100px 20px;
-  }
+      .navbar ul li a {
+        font-size: 14px;
+        text-shadow: 0 0 5px #00aaff;
+      }
 
-  .projects-grid {
-    grid-template-columns: 1fr; /* يخلي البوكسات تحت بعض */
-    gap: 20px;
-  }
+      section {
+        padding: 100px 20px;
+      }
 
-  .project-card {
-    width: 100%;
-    padding: 15px;
-  }
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
 
-  .project-card p {
-    font-size: 0.85rem;
-  }
+      .project-card {
+        width: 100%;
+        padding: 15px;
+      }
 
-  .slider-container img {
-    height: 180px; /* تصغير الصور */
-  }
+      .project-card p {
+        font-size: 0.85rem;
+      }
 
-  /* Modal */
-  .modal-content {
-    max-width: 95%;
-    max-height: 70%;
-  }
+      .slider-container img {
+        height: 180px;
+      }
 
-  .modal-arrow {
-    font-size: 40px;
-  }
-}
+      .modal-content {
+        max-width: 95%;
+        max-height: 70%;
+      }
 
-@media (max-width: 480px) {
-  .navbar h1 {
-    font-size: 1.2rem;
-  }
+      .modal-arrow {
+        font-size: 40px;
+      }
+    }
 
-  .navbar ul li a {
-    font-size: 12px;
-  }
+    @media (max-width: 480px) {
+      .navbar h1 {
+        font-size: 1.2rem;
+      }
 
-  .projects-title,
-  .section-title {
-    font-size: 1.6rem;
-  }
+      .navbar ul li a {
+        font-size: 12px;
+      }
 
-  .project-card h3 {
-    font-size: 1.1rem;
-  }
+      .projects-title,
+      .section-title {
+        font-size: 1.6rem;
+      }
 
-  .project-card p {
-    font-size: 0.8rem;
-  }
+      .project-card h3 {
+        font-size: 1.1rem;
+      }
 
-  .slider-container img {
-    height: 150px;
-  }
-}
+      .project-card p {
+        font-size: 0.8rem;
+      }
 
-
-
-
+      .slider-container img {
+        height: 150px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Background Video -->
-  <video autoplay muted loop class="background-video">
+
+  <div id="bg-image"></div>
+
+  <video autoplay muted loop id="bg-video">
     <source src="background-vid.mp4" type="video/mp4">
   </video>
 
-  <!-- Navbar -->
   <div class="navbar">
     <h1><i class="fas fa-shield-alt"></i>Recon</h1>
     <ul>
@@ -437,7 +427,6 @@
     </ul>
   </div>
 
-  <!-- Projects Section -->
   <section>
     <div class="projects-grid">
       <div class="project-card">
@@ -461,7 +450,7 @@
         </div>
         <h3>Dig</h3>
         <p> Command-line tool for DNS queries and troubleshooting.
-</p>
+        </p>
       </div>
 
       <div class="project-card">
@@ -473,7 +462,7 @@
         </div>
         <h3>Dnsrecon</h3>
         <p>DNS enumeration tool for discovering records, zones, and subdomains.
-</p>
+        </p>
       </div>
 
       <div class="project-card">
@@ -497,7 +486,7 @@
         </div>
         <h3>Recon-ng</h3>
         <p>Powerful reconnaissance framework with modular design for automated information gathering.
-</p>
+        </p>
       </div>
 
       <div class="project-card">
@@ -511,7 +500,7 @@
         <h3>Sublist3r</h3>
         <p>Fast subdomain enumeration tool using OSINT techniques.
 
-</p>
+        </p>
       </div>
 
       <div class="project-card">
@@ -524,7 +513,7 @@
         </div>
         <h3>The Harvester</h3>
         <p>Tool for gathering emails, subdomains, IPs, and hostnames from different public sources.
-</p>
+        </p>
       </div>
     </div>
   </section>
@@ -538,7 +527,6 @@
 
 
   <script>
-    // Binary effect
     document.addEventListener("mousemove", (e) => {
       const span = document.createElement("span");
       span.className = "binary";
@@ -552,7 +540,6 @@
       }, 1000);
     });
 
-    // Slider inside each project card
     document.querySelectorAll(".project-card").forEach(card => {
       const images = card.querySelectorAll("img");
       let index = 0;
@@ -573,7 +560,6 @@
         showImage(index);
       });
 
-      // Open modal when image clicked
       images.forEach((img, idx) => {
         img.addEventListener("click", () => {
           modal.style.display = "flex";
@@ -584,7 +570,6 @@
       });
     });
 
-    // Modal logic
     const modal = document.getElementById("imgModal");
     const modalContent = document.getElementById("modalContent");
     const span = document.querySelector(".close");
