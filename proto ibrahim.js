@@ -28,12 +28,10 @@ document.addEventListener("mousemove", (e) => {
 const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-// فتح/قفل المينو
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// قفل المينو بعد الضغط على أي لينك
 const links = document.querySelectorAll(".nav-links a");
 links.forEach(link => {
   link.addEventListener("click", () => {
